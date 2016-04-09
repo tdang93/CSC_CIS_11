@@ -1,3 +1,5 @@
+// demonstration of the use of the printf function from C
+
 	.global main
 
 main:
