@@ -1,4 +1,6 @@
-.globl main
+// https://en.wikipedia.org/wiki/Endianness - about endianness
+
+.global main
 .data
 
 vstart: .word 0x12345678
