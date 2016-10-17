@@ -27,7 +27,7 @@ int main()
 		counter++;
 	}
 
-	printf("The sum from 1 to %d is %d",n,sum);
+	printf("The sum from 1 to %d is %d\n",n,sum);
 	return 0;
 }
 
