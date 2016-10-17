@@ -7,7 +7,7 @@ main: 	push {lr} // save link register, this is one of many ways this can be don
 
 	// assembly program here
 
-	mov r0, #1024 // return code for your program (must be 8 bits)
+	mov r0, #0 // return code for your program (must be 8 bits)
 	pop {pc}
 
 .data

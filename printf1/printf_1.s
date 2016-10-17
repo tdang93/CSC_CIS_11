@@ -1,6 +1,7 @@
 .global main
+//.global _start
 .text
-
+//_start:
 main:
 	push {lr}	// save lr for exiting main function
 

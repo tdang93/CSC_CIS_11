@@ -10,10 +10,6 @@ int main()
         unsigned int R2=0; //Denominator (b)
         unsigned int R3=0; //Numerator (a)
 
-	//Declaration of variables holding inputs
-        unsigned int R4=0; //Denominator
-        unsigned int R5=0; //Numerator
-
         int a, b;
 
         printf("Enter a value for a: ");
