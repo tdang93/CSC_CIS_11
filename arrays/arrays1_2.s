@@ -1,3 +1,4 @@
+// this file has same addressing bug as arrays1.s
 .text
 .balign 4
 .global main
