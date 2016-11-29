@@ -3,6 +3,7 @@
 
 .global main
 .text
+.align 2
 
 main:
 	push {lr}
@@ -29,6 +30,7 @@ main:
 	pop {pc}
 
 .data
+.align 2
 div_mod_result1: .asciz "Result of div_mod(%d, %d) is: "
 div_mod_result2: .asciz " mod=%d, div=%d\n"
 

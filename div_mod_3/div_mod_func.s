@@ -73,7 +73,8 @@ divide:
 .endfunc
 
 .func mod
-	// mod - gets the modulus of two unsigned integers (simply calls div_mod)
+	// mod - gets the modulus of two unsigned integers (simply calls div_mod - this function may not be needed since div_mod already
+	// returns R0 as a %b, but is provided anyways for completeness)
 	// input:	R0: a
 	//		R1: b
 	// returns:	R0: a % b
