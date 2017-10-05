@@ -5,8 +5,8 @@
 // Low word is the lower 32 bits, bits 31:0
 
 //	 High Word	Low Word
-x: .word 0x7FFFFFFF,	0x00000001
-y: .word 0x70000000,	0xFFFFFFFF
+x: .word 0x12345678,	0x80000000
+y: .word 0x11111111,	0x7FFFFFFF
 z: .word 0x0, 		0x0
 
 .text
