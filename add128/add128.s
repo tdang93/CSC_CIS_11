@@ -23,29 +23,29 @@ main:
 	ldr r0, =z		// r0 contains pointer to z
 	str r2, [r0, #12]	// store z[31:0] at dereferenced pointer [r0+12]
 
-	ldr r0, =x
-        ldr r0, [r0, #8]
-        ldr r1, =y
-        ldr r1, [r1, #8]
-        adcs r2, r0, r1
-        ldr r0, =z
-        str r2, [r0, #8]
+        ldr r0, =x              // r0 contains pointer to x
+        ldr r0, [r0, #8]       	// dereference [r0+8], gets value at x[63:32]
+        ldr r1, =y              // r1 contains pointer to y
+        ldr r1, [r1, #8]        // dereference [r1+8], gets value at y[63:32]
+        adcs r2, r0, r1         // add with carry (with status flag update) r2 = r0 + r1 + carry
+        ldr r0, =z              // r0 contains pointer to z
+        str r2, [r0, #8]        // store z[63:32] at dereferenced pointer [r0+8]
 
- 	ldr r0, =x
-        ldr r0, [r0, #4]
-        ldr r1, =y
-        ldr r1, [r1, #4]
-        adcs r2, r0, r1
-        ldr r0, =z
-        str r2, [r0, #4]
+        ldr r0, =x              // r0 contains pointer to x
+        ldr r0, [r0, #4]        // dereference [r0+4], gets value at x[95:64]
+        ldr r1, =y              // r1 contains pointer to y
+        ldr r1, [r1, #4]        // dereference [r1+4], gets value at y[95:64]
+        adcs r2, r0, r1         // add with carry (with status flag update) r2 = r0 + r1 + carry
+        ldr r0, =z              // r0 contains pointer to z
+        str r2, [r0, #4]        // store z[95:64] at dereferenced pointer [r0+4]
 
- 	ldr r0, =x
-        ldr r0, [r0]
-        ldr r1, =y
-        ldr r1, [r1]
-        adcs r2, r0, r1
-        ldr r0, =z
-        str r2, [r0]
+        ldr r0, =x              // r0 contains pointer to x
+        ldr r0, [r0]       	// dereference [r0], gets value at x[127:96]
+        ldr r1, =y              // r1 contains pointer to y
+        ldr r1, [r1]       	// dereference [r1], gets value at y[127:96]
+        adcs r2, r0, r1         // add with carry (with status flag update) r2 = r0 + r1 + carry
+        ldr r0, =z              // r0 contains pointer to z
+        str r2, [r0]       	// store z[127:96] at dereferenced pointer [r0]
 halt:
 	pop {pc}
 
