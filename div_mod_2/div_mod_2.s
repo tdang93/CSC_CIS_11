@@ -63,8 +63,8 @@ DO_WHL1: //do{
 		lsl r3, #1
         	//R2<<=1; //Division shift left
 		lsl r2, #1
-        	//}while(R0>R3); //Shift Left until Decrement/Division Greater than Numerator
-		cmp r0,r3
+        	//}while(R3>R0); //Shift Left until Decrement/Division Greater than Numerator
+		cmp r3,r0
 		bgt DO_WHL1 // if r0 greater than r3, goto DO_WHL1
         //R3>>=1; //Shift Denominator right
 	lsr r3, #1
@@ -73,7 +73,7 @@ DO_WHL1: //do{
         //Loop and keep subtracting off the shifted Denominator
 WHL_R0GTER3: //while(R0>=R3){ //Keep Looping until the division is complete
 		cmp r0, r3
-		ble WHL_R0GTER3_DONE // if R0 < R3, we are done
+		blt WHL_R0GTER3_DONE // if R0 < R3, we are done
         	//    R1+=R2; //Increment division by the increment
 		adds r1,r2 // r1 = r1 + r2
         	//    R0-=R3; //Subtract shifted Denominator with remainder of Numerator
